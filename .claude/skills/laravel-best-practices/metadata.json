@@ -1,0 +1,13 @@
+{
+  "version": "1.2.0",
+  "organization": "Laravel Community & SGT Skills",
+  "date": "January 2026",
+  "abstract": "Comprehensive Laravel best practices guide covering MVC + Service Pattern architecture, security (authentication/authorization), performance (eager loading, caching), coding standards (PSR-12, naming conventions), Eloquent models, Blade components, request handling, and testing. Contains 15+ rules across 8 categories prioritized by impact from critical (security, performance) to incremental (events, testing). Each rule includes detailed explanations, real-world examples comparing incorrect vs. correct implementations, and specific impact metrics.",
+  "references": [
+    "https://laravel.com/docs",
+    "https://laravel.com/docs/contributions",
+    "https://spatie.be/guides/laravel-php",
+    "https://github.com/alexeymezenin/laravel-best-practices",
+    "https://www.php-fig.org/psr/psr-12/"
+  ]
+}
