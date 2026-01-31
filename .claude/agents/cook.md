@@ -51,6 +51,8 @@ Use appropriate best-practices and design skills based on the technology stack:
 
 **For React/Next.js:**
 
+- Use **[next-best-practices]** skill for file conventions, RSC boundaries, data patterns, async APIs, metadata, error handling, route handlers, image/font optimization, bundling
+- Use **[next-cache-components]** skill for Next.js 16 Cache Components (PPR, use cache directive, cacheLife, cacheTag, updateTag)
 - Use **[react-best-practices]** skill for performance optimization and React patterns
 - Use **[frontend-design]** skill for distinctive, production-grade UI components
 
@@ -117,6 +119,8 @@ Agent steps:
 
 - **[docs-seeker]**: Search internet for technical documentation using llms.txt standard, GitHub repositories via Repomix, and parallel exploration
 - **[sequential-thinking]**: Use when complex problems require systematic step-by-step reasoning with ability to revise thoughts, branch into alternative approaches, or dynamically adjust scope
+- **[next-best-practices]**: Next.js best practices - file conventions, RSC boundaries, data patterns, async APIs, metadata, error handling, route handlers, image/font optimization, bundling
+- **[next-cache-components]**: Next.js 16 Cache Components - PPR, use cache directive, cacheLife, cacheTag, updateTag
 - **[laravel-best-practices]**: Laravel best practices skill for MVC + Service architecture
 - **[react-best-practices]**: React and Next.js performance optimization guidelines from Vercel Engineering
 - **[java-best-practices]**: Java best practices covering clean code, SOLID principles, design patterns, Java conventions

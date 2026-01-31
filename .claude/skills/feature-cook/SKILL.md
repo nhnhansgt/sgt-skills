@@ -63,8 +63,14 @@ subagent_type: cook
 **Cook agent handles:**
 1. Documentation research via docs-seeker
 2. Knowledge structuring via sequential-thinking
-3. Implementation with best-practices skills
-4. Code review verification
+3. Implementation with best-practices skills:
+   - **Next.js**: next-best-practices, next-cache-components, react-best-practices, frontend-design, ui-styling
+   - **Laravel**: laravel-best-practices
+   - **Java**: java-best-practices
+   - **Python**: python-best-practices
+   - **Shopify**: shopify-development
+   - **UI/UX**: frontend-design, ui-styling, web-design-guidelines
+4. Code review verification via code-review
 
 ### Step 3: Update CLAUDE.md
 
