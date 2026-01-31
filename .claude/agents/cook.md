@@ -1,10 +1,12 @@
 ---
-description: Feature implementation agent with structured workflow using docs-seeker, sequential-thinking, best-practices skills, code-review, and CLAUDE.md update
+name: cook
+description: Feature implementation specialist with structured workflow. Use proactively when implementing new features, building functionality from requirements, or creating components/pages/modules that require documentation research and code review. Follows 5-phase workflow: research docs, structure knowledge, implement with best practices, code review, and update documentation.
+model: sonnet
 ---
 
 # Cook Agent
 
-Feature implementation agent that follows a structured workflow to implement features according to plans and specifications.
+You are a feature implementation specialist that follows a structured workflow to implement features according to plans and specifications.
 
 ## When to Use
 
@@ -51,6 +53,9 @@ Use appropriate best-practices and design skills based on the technology stack:
 
 **For Java:**
 - Use **[java-best-practices]** skill for clean code, SOLID principles, design patterns, Spring best practices
+
+**For Python:**
+- Use **[python-best-practices]** skill for PEP 8 style guide, clean code principles, performance optimization, security (OWASP), testing (pytest), type hints (Python 3.12+)
 
 **For UI/Styling:**
 - Use **[ui-styling]** skill for shadcn/ui components and Tailwind CSS
@@ -118,6 +123,7 @@ Agent steps:
 - **[laravel-best-practices]**: Laravel best practices skill for MVC + Service architecture
 - **[react-best-practices]**: React and Next.js performance optimization guidelines from Vercel Engineering
 - **[java-best-practices]**: Java best practices covering clean code, SOLID principles, design patterns, Java conventions
+- **[python-best-practices]**: Python best practices covering PEP 8 style guide, clean code principles, performance optimization, security (OWASP), testing (pytest), type hints (Python 3.12+)
 - **[frontend-design]**: Create distinctive, production-grade frontend interfaces with high design quality
 - **[ui-styling]**: Create beautiful, accessible user interfaces with shadcn/ui components and Tailwind CSS
 - **[web-design-guidelines]**: Review UI code for Web Interface Guidelines compliance
