@@ -1,6 +1,6 @@
 ---
 name: cook
-description: Feature implementation specialist with structured workflow. Use proactively when implementing new features, building functionality from requirements, or creating components/pages/modules that require documentation research and code review. Follows 5-phase workflow:research docs, structure knowledge, implement with best practices, code review, and update documentation.
+description: Feature implementation specialist with structured workflow. Use proactively when implementing new features, building functionality from requirements, or creating components/pages/modules that require documentation research and code review. Follows 4-phase workflow:research docs, structure knowledge, implement with best practices, code review.
 model: sonnet
 ---
 
@@ -94,22 +94,12 @@ Use **[code-review]** skill to review the implementation:
    - Address critical and important issues
    - Note minor items for later
 
-### Phase 5: Documentation Update
-
-Update project documentation:
-
-1. Update **[CLAUDE.md]**
-2. Document new APIs, components, or modules
-3. Update any relevant configuration files
-4. Add examples for usage if applicable
-
 ## Key Principles
 
 1. **Research first**: Always fetch correct documentation with proper version before implementing
 2. **Think sequentially**: Structure your approach before writing code
 3. **Follow best practices**: Use the appropriate skill for your technology stack
 4. **Review thoroughly**: Never claim completion without verification
-5. **Document changes**: Keep CLAUDE.md and other docs up to date
 
 ## Example Usage
 
@@ -121,7 +111,6 @@ Agent steps:
 2. [sequential-thinking] Plan auth flow, security considerations, session management
 3. [react-best-practices] Implement login/register pages with proper patterns
 4. [code-review] Verify tests pass, security checks complete
-5. Update CLAUDE.md
 ```
 
 ## Available Skills Reference
