@@ -1,6 +1,6 @@
 ---
 name: feature-cook
-description: Orchestrate feature implementation by combining Explore agent for codebase discovery and Cook agent for implementation. Use when implementing new features that require understanding existing codebase patterns before implementation. Workflow: Explore (serena mcp) → Cook (implement) → Update CLAUDE.md.
+description: Orchestrate feature implementation by combining Explore agent for codebase discovery and Cook agent for implementation. Use when implementing new features that require understanding existing codebase patterns before implementation. Workflow:Explore (serena mcp) → Cook (implement) → Update CLAUDE.md.
 author: sgt-skills
 ---
 
