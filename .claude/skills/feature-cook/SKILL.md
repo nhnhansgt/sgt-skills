@@ -1,6 +1,6 @@
 ---
 name: feature-cook
-description: Orchestrate feature implementation by combining Explore agent for codebase discovery and Cook agent for implementation. Use when implementing new features that require understanding existing codebase patterns before implementation. Workflow:Explore (serena mcp) → Cook (implement) → Update CLAUDE.md.
+description: Orchestrate feature implementation by combining Explore agent for codebase discovery, Cook agent for implementation, and claudemd-updater for documentation updates. Use when implementing new features that require understanding existing codebase patterns before implementation. Workflow:Explore (serena mcp) → Cook (implement) → claudemd-updater (update CLAUDE.md).
 author: sgt-skills
 ---
 
@@ -74,22 +74,17 @@ subagent_type: cook
 
 ### Step 3: Update CLAUDE.md
 
-After implementation completes, update `CLAUDE.md` with:
+Use the **claudemd-updater agent** to automatically update `CLAUDE.md` with recent changes:
 
-1. **New patterns discovered** - Document any codebase conventions found
-2. **Feature documentation** - Describe the implemented feature
-3. **Key files modified** - List files changed/created
-4. **Dependencies added** - Note new packages or imports
-
-Update format:
-```markdown
-## Recent Changes
-
-### [Feature Name] - [Date]
-- **Description**: Brief feature description
-- **Files Modified**: List of files
-- **Patterns**: Notable conventions observed
+```yaml
+subagent_type: claudemd-updater
 ```
+
+The agent will:
+- Analyze git history for recent changes
+- Identify new features, API changes, configuration updates
+- Update relevant CLAUDE.md sections
+- Add timestamped summary to Recent Updates section
 
 ## Example Usage
 
@@ -107,15 +102,16 @@ Agent workflow:
    - Add avatar upload handling
    - Follow discovered patterns
 
-3. Update CLAUDE.md with feature summary
+3. [claudemd-updater agent]
+   - Update CLAUDE.md with recent changes
 ```
 
 ## Key Principles
 
 1. **Explore first** - Always understand context before implementing
-2. **Specify subagent** - Always explicitly name the subagent (Explore, cook)
+2. **Specify subagent** - Always explicitly name the subagent (Explore, cook, claudemd-updater)
 3. **Preserve patterns** - Follow existing codebase conventions
-4. **Document changes** - Keep CLAUDE.md updated
+4. **Document changes** - Use claudemd-updater agent to keep CLAUDE.md updated
 
 ## See Also
 
