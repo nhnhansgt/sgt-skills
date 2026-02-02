@@ -60,9 +60,9 @@ Use appropriate best-practices and design skills based on the technology stack:
 
 - Use **[java-best-practices]** skill for clean code, SOLID principles, design patterns, Spring best practices
 
-**For Python:**
+**For Supabase/Postgres:**
 
-- Use **[python-best-practices]** skill for PEP 8 style guide, clean code principles, performance optimization, security (OWASP), testing (pytest), type hints (Python 3.12+)
+- Use **[supabase-postgres-best-practices]** skill for query performance, connection management, security & RLS, schema design, concurrency & locking, data access patterns, monitoring & diagnostics, and advanced features
 
 **For UI/Styling:**
 
@@ -125,6 +125,7 @@ Agent steps:
 - **[react-best-practices]**: React and Next.js performance optimization guidelines from Vercel Engineering
 - **[java-best-practices]**: Java best practices covering clean code, SOLID principles, design patterns, Java conventions
 - **[python-best-practices]**: Python best practices covering PEP 8 style guide, clean code principles, performance optimization, security (OWASP), testing (pytest), type hints (Python 3.12+)
+- **[supabase-postgres-best-practices]**: Postgres performance optimization and best practices from Supabase. Contains rules across 8 categories for query performance, connection management, security & RLS, schema design, concurrency & locking, data access patterns, monitoring & diagnostics, and advanced features
 - **[frontend-design]**: Create distinctive, production-grade frontend interfaces with high design quality
 - **[ui-styling]**: Create beautiful, accessible user interfaces with shadcn/ui components and Tailwind CSS
 - **[web-design-guidelines]**: Review UI code for Web Interface Guidelines compliance
