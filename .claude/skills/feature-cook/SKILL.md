@@ -64,7 +64,7 @@ subagent_type: cook
 1. Documentation research via docs-seeker
 2. Knowledge structuring via sequential-thinking
 3. Implementation with best-practices skills:
-   - **Next.js**: next-best-practices, next-cache-components, react-best-practices, frontend-design, ui-styling
+   - **Next.js**: next-best-practices, next-cache-components, react-best-practices, vercel-composition-patterns, frontend-design, ui-styling
    - **Laravel**: laravel-best-practices
    - **Java**: java-best-practices
    - **Python**: python-best-practices

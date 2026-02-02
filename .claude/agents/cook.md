@@ -54,6 +54,7 @@ Use appropriate best-practices and design skills based on the technology stack:
 - Use **[next-best-practices]** skill for file conventions, RSC boundaries, data patterns, async APIs, metadata, error handling, route handlers, image/font optimization, bundling
 - Use **[next-cache-components]** skill for Next.js 16 Cache Components (PPR, use cache directive, cacheLife, cacheTag, updateTag)
 - Use **[react-best-practices]** skill for performance optimization and React patterns
+- Use **[vercel-composition-patterns]** skill for React composition patterns (avoid boolean props, compound components, state lifting, React 19 APIs)
 - Use **[frontend-design]** skill for distinctive, production-grade UI components
 
 **For Java:**
@@ -123,6 +124,7 @@ Agent steps:
 - **[next-cache-components]**: Next.js 16 Cache Components - PPR, use cache directive, cacheLife, cacheTag, updateTag
 - **[laravel-best-practices]**: Laravel best practices skill for MVC + Service architecture
 - **[react-best-practices]**: React and Next.js performance optimization guidelines from Vercel Engineering
+- **[vercel-composition-patterns]**: React composition patterns that scale. Use when refactoring components with boolean prop proliferation, building flexible component libraries, or designing reusable APIs. Includes compound components, state lifting, context interface, and React 19 API changes
 - **[java-best-practices]**: Java best practices covering clean code, SOLID principles, design patterns, Java conventions
 - **[python-best-practices]**: Python best practices covering PEP 8 style guide, clean code principles, performance optimization, security (OWASP), testing (pytest), type hints (Python 3.12+)
 - **[supabase-postgres-best-practices]**: Postgres performance optimization and best practices from Supabase. Contains rules across 8 categories for query performance, connection management, security & RLS, schema design, concurrency & locking, data access patterns, monitoring & diagnostics, and advanced features
