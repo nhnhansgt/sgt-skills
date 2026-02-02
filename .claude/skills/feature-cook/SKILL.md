@@ -68,6 +68,7 @@ subagent_type: cook
    - **Laravel**: laravel-best-practices
    - **Java**: java-best-practices
    - **Python**: python-best-practices
+   - **Supabase/Postgres**: supabase-postgres-best-practices
    - **Shopify**: shopify-development
    - **UI/UX**: frontend-design, ui-styling, web-design-guidelines
 4. Code review verification via code-review
