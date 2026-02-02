@@ -43,7 +43,21 @@ Use `/analyze-codebase` to:
 - Map relationships between components
 - Discover existing implementations
 
-### 4. Feature Cook (Implementation)
+### 4. Mermaid.js v11 (Visualization)
+
+Use `/mermaidjs-v11` to:
+- Create flowcharts for process flows and decision trees
+- Design sequence diagrams for actor interactions and API flows
+- Build class diagrams for OOP structures and data models
+- Generate state diagrams for state machines and workflows
+- Create ER diagrams for database relationships
+- Design Gantt charts for project timelines
+- Build user journey maps for UX flows
+- Generate architecture diagrams for system design
+
+Supported diagram types include flowchart, sequenceDiagram, classDiagram, stateDiagram, erDiagram, gantt, journey, and 24+ other types.
+
+### 5. Feature Cook (Implementation)
 
 Use `/feature-cook` to:
 - Implement the solution based on research
@@ -74,4 +88,16 @@ This would:
 1. Use sequential-thinking to design the approach
 2. Use docs-seeker to find Redis rate-limiting patterns
 3. Use analyze-codebase to understand current API structure
-4. Use feature-cook to implement the solution
+4. Use mermaidjs-v11 to create architecture diagrams showing the rate limiting flow
+5. Use feature-cook to implement the solution
+
+```bash
+/ultrathink Design a microservices architecture for the payment system
+```
+
+This would:
+1. Use sequential-thinking to break down requirements and identify services
+2. Use docs-seeker to research microservices best practices
+3. Use analyze-codebase to understand existing payment infrastructure
+4. Use mermaidjs-v11 to create system architecture diagrams, sequence diagrams, and data flow diagrams
+5. Use feature-cook to implement the services
