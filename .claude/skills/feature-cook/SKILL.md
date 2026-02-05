@@ -1,6 +1,6 @@
 ---
 name: feature-cook
-description: Orchestrate feature implementation by combining Explore agent for codebase discovery, Cook agent for implementation, and claudemd-updater for documentation updates. Use when implementing new features that require understanding existing codebase patterns before implementation. Workflow:Explore (serena mcp) → Cook (implement) → claudemd-updater (update CLAUDE.md).
+description: Orchestrate feature implementation by combining Explore agent for codebase discovery and Cook agent for implementation. Use when implementing new features that require understanding existing codebase patterns before implementation. Workflow: Explore (serena mcp) → Cook (implement).
 author: sgt-skills
 ---
 
@@ -10,29 +10,35 @@ Orchestrate feature implementation by combining Explore and Cook agents with Ser
 
 ## Overview
 
-This skill provides a workflow for implementing features that first requires understanding the existing codebase structure, patterns, and conventions before writing implementation code.
+This skill provides a two-phase workflow for implementing features:
+
+1. **Explore (Scout)** - Serena MCP agent scouts the codebase and prepares comprehensive implementation context
+2. **Cook (Execute)** - Implements the feature using the prepared context without redundant exploration
 
 **When to use this skill:**
-- Implementing new features in existing codebases
-- Adding functionality that requires understanding existing patterns
-- Working with unfamiliar codebases where context discovery is needed
+- Implementing new features that require understanding existing codebase patterns
+- Adding functionality where you need to discover conventions before implementing
+- Working with unfamiliar codebases where context discovery enables clean implementation
 
 ## Workflow
 
-### Step 1: Explore with Serena MCP
+### Step 1: Explore with Serena MCP (Scout & Prepare Context)
 
-Use the **Explore subagent** with Serena MCP tools to scout the codebase:
+Use the **Explore subagent** with Serena MCP tools to scout the codebase and prepare comprehensive context for the Cook subagent:
 
 ```yaml
 subagent_type: Explore
 ```
 
-**Exploration goals:**
-1. Understand project structure and architecture
-2. Identify existing patterns and conventions
-3. Locate relevant files and symbols
-4. Understand data flows and dependencies
-5. Find similar implementations for reference
+**Purpose**: Gather and structure all necessary context so Cook can execute implementation efficiently without needing to explore the codebase itself.
+
+**Exploration goals (Context Preparation):**
+1. **Project structure** - Map out directories, entry points, and architecture
+2. **Patterns & conventions** - Identify coding style, naming conventions, architectural patterns
+3. **Relevant files & symbols** - Pinpoint exact files, classes, functions to modify/create
+4. **Data flows & dependencies** - Understand how data moves through the system
+5. **Reference implementations** - Find similar features to use as templates
+6. **Tech stack & tools** - Note frameworks, libraries, build tools in use
 
 **Key Serena tools to use:**
 - `list_dir` - Discover directory structure
@@ -46,9 +52,9 @@ subagent_type: Explore
 - `medium` - Moderate exploration (default)
 - `very thorough` - Comprehensive analysis
 
-### Step 2: Implement with Cook Agent
+### Step 2: Implement with Cook Agent (Execute with Context)
 
-Use the **Cook subagent** to implement the feature based on exploration findings:
+Use the **Cook subagent** to implement the feature using the context prepared by Explore:
 
 ```yaml
 subagent_type: cook
@@ -73,46 +79,31 @@ subagent_type: cook
    - **UI/UX**: frontend-design, ui-styling, web-design-guidelines
 4. Code review verification via code-review
 
-### Step 3: Update CLAUDE.md
-
-Use the **claudemd-updater agent** to automatically update `CLAUDE.md` with recent changes:
-
-```yaml
-subagent_type: claudemd-updater
-```
-
-The agent will:
-- Analyze git history for recent changes
-- Identify new features, API changes, configuration updates
-- Update relevant CLAUDE.md sections
-- Add timestamped summary to Recent Updates section
-
 ## Example Usage
 
 ```
 User: Add user profile feature with avatar upload
 
 Agent workflow:
-1. [Explore subagent: medium] 
-   - Find existing user models/controllers
-   - Identify upload handling patterns
-   - Discover storage configurations
 
-2. [Cook subagent]
-   - Implement profile routes/controller
-   - Add avatar upload handling
-   - Follow discovered patterns
+1. **[Explore subagent: medium]** - Scout codebase & prepare context
+   - Locate: User model at `src/models/User.ts`, existing auth controllers
+   - Identify: Upload pattern uses `multer` middleware in `src/middleware/upload.ts`
+   - Discover: Storage configured in `src/config/storage.ts` (S3 bucket)
+   - Context prepared for Cook: File paths, patterns, storage config
 
-3. [claudemd-updater agent]
-   - Update CLAUDE.md with recent changes
+2. **[Cook subagent]** - Execute with provided context
+   - Create profile controller using discovered patterns
+   - Implement avatar upload with multer middleware
+   - Follow existing code style and architecture
 ```
 
 ## Key Principles
 
-1. **Explore first** - Always understand context before implementing
-2. **Specify subagent** - Always explicitly name the subagent (Explore, cook, claudemd-updater)
-3. **Preserve patterns** - Follow existing codebase conventions
-4. **Document changes** - Use claudemd-updater agent to keep CLAUDE.md updated
+1. **Explore to prepare** - Scout codebase to gather context, not to implement
+2. **Cook to execute** - Implement using prepared context, avoid redundant exploration
+3. **Pass context explicitly** - Cook should receive all necessary context from Explore
+4. **Preserve patterns** - Follow existing codebase conventions discovered by Explore
 
 ## See Also
 
