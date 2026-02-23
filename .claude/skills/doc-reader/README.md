@@ -13,6 +13,11 @@ The provided target directory or file contains source documents (PDF, Markdown, 
 - No complex OCR or format conversion needed — Gemini reads PDFs directly.
 - Strong fallback mechanism via `pdftotext` for PDF files exceeding model limits.
 
+## Prerequirement
+
+- **Gemini CLI**: Requires `gemini` command to be available. Install via `npm install -g @google/gemini-cli` and ensure your API key is configured.
+- **Poppler**: Requires `pdftotext` for large PDF fallback processing. Install via `brew install poppler` (MacOS) or `apt/apt-get install poppler-utils` (Ubuntu/Debian).
+
 ## Usage Guide
 
 ### 1. Environment Check
